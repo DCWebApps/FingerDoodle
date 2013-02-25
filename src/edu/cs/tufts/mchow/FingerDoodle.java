@@ -1,5 +1,6 @@
 package edu.cs.tufts.mchow;
 
+import com.crashlytics.android.Crashlytics;
 import edu.cs.tufts.mchow.ColorPickerDialog.OnColorChangedListener;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -21,6 +22,8 @@ public class FingerDoodle extends Activity
 	public void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
+		Crashlytics.start(this);
+		
 		fdv = new FingerDoodleView(this);
 		setContentView(fdv);
 	}
