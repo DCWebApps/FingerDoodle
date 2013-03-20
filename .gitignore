@@ -15,10 +15,11 @@
 *.dmg
 *.gz
 *.iso
-*.jar
+#*.jar
 *.rar
 *.tar
 *.zip
+*.apk
 
 # Logs and databases #
 ######################
@@ -43,3 +44,4 @@ Thumbs.db
 .classpath
 .crashlytics_data
 .project
+bin

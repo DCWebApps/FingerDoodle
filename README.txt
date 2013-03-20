@@ -1,1 +1,1 @@
-This app has been published to the Android Market
+This app has been published to Google Play
