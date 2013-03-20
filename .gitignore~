@@ -40,8 +40,8 @@ Thumbs.db
 
 # Crashlytics #
 ###############
-#.settings
-#.classpath
+.settings
+.classpath
 .crashlytics_data
-#.project
+.project
 bin
