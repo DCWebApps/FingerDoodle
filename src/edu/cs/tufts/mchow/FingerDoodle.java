@@ -2,6 +2,7 @@ package edu.cs.tufts.mchow;
 
 import com.crashlytics.android.Crashlytics;
 import edu.cs.tufts.mchow.ColorPickerDialog.OnColorChangedListener;
+import edu.tufts.cs.mchow.fingerdoodle.R;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;

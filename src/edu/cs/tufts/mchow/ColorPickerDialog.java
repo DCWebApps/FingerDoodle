@@ -22,6 +22,7 @@ import android.content.Context;
 import android.graphics.*;
 import android.view.MotionEvent;
 import android.view.View;
+import edu.tufts.cs.mchow.fingerdoodle.R;
 
 public class ColorPickerDialog extends Dialog {
 
