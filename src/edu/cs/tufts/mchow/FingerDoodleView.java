@@ -9,11 +9,13 @@ public class FingerDoodleView extends SurfaceView implements SurfaceHolder.Callb
 {
 	protected Doodle doodle;
 	protected DrawingThread thread;
+	protected Paint backgroundPaint;
 	
 	public FingerDoodleView (Context context)
 	{
 		super(context);
 		doodle = new Doodle();
+		backgroundPaint = new Paint();
 		getHolder().addCallback(this);
 		thread = new DrawingThread(getHolder(), this);
 		setFocusable(true);
@@ -25,10 +27,7 @@ public class FingerDoodleView extends SurfaceView implements SurfaceHolder.Callb
 	}
 	
 	@Override
-	public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
-		// TODO Auto-generated method stub
-		
-	}
+	public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {}
 
 	@Override
 	public void surfaceCreated(SurfaceHolder holder)
@@ -64,11 +63,12 @@ public class FingerDoodleView extends SurfaceView implements SurfaceHolder.Callb
 	@Override
 	public void onDraw (Canvas canvas)
 	{
-		Paint backgroundPaint = new Paint();
 		backgroundPaint.setColor(doodle.backgroundColor);
-		canvas.drawPaint(backgroundPaint);
-		for (DoodlePath p: doodle.paths) {
-			canvas.drawPath(p.path, p.paint);
+		if (canvas != null) {
+			canvas.drawPaint(backgroundPaint);
+			for (DoodlePath p: doodle.paths) {
+				canvas.drawPath(p.path, p.paint);
+			}
 		}
 	}
 	
