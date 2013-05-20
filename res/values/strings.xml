@@ -11,7 +11,7 @@
 	<string name="uPaint">Change Paint</string>
 	<string name="publish">Publish to Web</string>
 	<string name="about">About</string>
-	<string name="about_text">Finger Doodle\n\nVersion 1.1\n\nWritten by Ming Chow\n\nIcon of @nrnrnr by Tim Roberts\n\nLast updated on March 10, 2013</string>
+	<string name="about_text">Finger Doodle\n\nVersion 1.2\n\nWritten by Ming Chow\n\nIcon of @nrnrnr by Tim Roberts\n\nLast updated on May 20, 2013</string>
 	<string name="dialog_color_picker">Pick a Color</string>
 	<string name="dialog_change_stroke_width">Change Stroke Width</string>
 </resources>
