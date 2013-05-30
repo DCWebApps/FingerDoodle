@@ -5,6 +5,8 @@ import android.graphics.*;
 //import android.util.Log;
 import android.view.*;
 
+import com.crashlytics.android.Crashlytics;
+
 public class FingerDoodleView extends SurfaceView implements SurfaceHolder.Callback
 {
 	protected Doodle doodle;
@@ -55,8 +57,12 @@ public class FingerDoodleView extends SurfaceView implements SurfaceHolder.Callb
 				thread.join();
 				retry = false;
 			}
-			catch (InterruptedException e) {
+			catch (InterruptedException ie) {
+                Crashlytics.logException(ie);
 			}
+            catch (Exception e) {
+                Crashlytics.logException(e);
+            }
 		}
 	}
 	

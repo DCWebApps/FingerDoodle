@@ -3,6 +3,8 @@ package edu.tufts.cs.mchow.fingerdoodle;
 import android.graphics.*;
 import android.view.SurfaceHolder;
 
+import com.crashlytics.android.Crashlytics;
+
 public class DrawingThread extends Thread
 {
 	private SurfaceHolder surfaceHolder;
@@ -48,6 +50,9 @@ public class DrawingThread extends Thread
 					fingerDoodleView.onDraw(c);
 				}
 			}
+            catch (Exception e) {
+                Crashlytics.logException(e);
+            }
 			finally {
 				if (c != null) {
 					surfaceHolder.unlockCanvasAndPost(c);
